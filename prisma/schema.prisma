@@ -1,0 +1,23 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum PostStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+model Post {
+  id        String     @id @default(uuid())  // UUID sebagai ID unik
+  title     String
+  content   String
+  status    PostStatus @default(DRAFT)      // Status default adalah DRAFT
+  createdAt DateTime   @default(now())
+}
