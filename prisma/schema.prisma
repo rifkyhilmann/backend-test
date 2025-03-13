@@ -5,7 +5,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://postgres:Rifkyhilman123@db.efxzajrjxigjxwhodejx.supabase.co:5432/postgres?schema=public&connection_timeout=50&sslmode=require"
+  url      = "postgresql://postgres.efxzajrjxigjxwhodejx:Rifkyhilman123@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres"
 }
 
 enum PostStatus {
